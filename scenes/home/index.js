@@ -5,8 +5,11 @@ const scene = new Scene('HOME_SCENE');
 
 scene.enter(ctx => {
     ctx.reply('Welcome', Markup.keyboard([
-        ['Register']
+        ['Register'],
+        ['Event']
     ]).extra());
 });
+
+scene.hears('Event', ctx => ctx.scene.enter('EVENT_SCENE'));
 
 module.exports = scene;
