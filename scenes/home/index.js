@@ -5,8 +5,9 @@ const scene = new Scene('HOME_SCENE');
 
 scene.enter(ctx => {
     ctx.reply('Welcome', Markup.keyboard([
-        ['Register']
+        ['/contact']
     ]).extra());
 });
 
+scene.command('contact', ctx => ctx.scene.enter('CONTACT_SCENE'));
 module.exports = scene;
