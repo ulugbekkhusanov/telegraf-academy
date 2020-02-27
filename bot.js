@@ -8,10 +8,12 @@ const homeScene = require('./scenes/home');
 const contactScene = require('./scenes/contact');
 
 
+const courseScene = require('./scenes/course');
+const faqSence = require('./scenes/FAQ')
 
 const bot = new Telegraf(process.env.BOT_TOKEN);
+const stage = new Stage([startScene, homeScene, courseScene,faqSence,contactScene], { default: 'START_SCENE' });
 
-const stage = new Stage([startScene, homeScene, contactScene], { default: 'START_SCENE' });
 bot.use(session());
 bot.use(stage.middleware());
 

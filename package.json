@@ -11,6 +11,7 @@
   "dependencies": {
     "dotenv": "^8.2.0",
     "mongoose": "^5.9.2",
-    "telegraf": "^3.36.0"
+    "telegraf": "^3.36.0",
+    "telegraf-i18n": "^6.6.0"
   }
 }
