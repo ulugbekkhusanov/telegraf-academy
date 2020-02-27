@@ -18,18 +18,6 @@ scene.enter(async ctx => {
 scene.command('courses', ctx => ctx.scene.enter('COURSE_SCENE'));
 scene.command('start', ctx => ctx.scene.enter('START_SCENE'));
 
-scene.enter(ctx => {
-    ctx.reply('Welcome', Markup.keyboard([
-        ['/contact']
-    ]).extra());
-});
-
-scene.command('contact', ctx => ctx.scene.enter('CONTACT_SCENE'));
-
-        ['Faq']
-    ]).extra());
-});
-
 scene.hears('Event', ctx => ctx.scene.enter('EVENT_SCENE'));
 scene.hears(('Faq'), ctx => ctx.scene.enter('FAQ_SCENE'));
 
