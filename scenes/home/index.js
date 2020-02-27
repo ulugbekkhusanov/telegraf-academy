@@ -9,8 +9,8 @@ scene.enter(async ctx => {
     ]).extra()), 
     await ctx.reply('Welcome to the main page', Markup.keyboard([
         ['Register'],
-        ['/courses'],['/start'],
-        ['Event'],['Faq']
+        ['/courses','/start'],
+        ['Event','Faq']
     ]).extra());
 });
 
