@@ -16,4 +16,12 @@ scene.enter(async ctx => {
 
 scene.command('courses', ctx => ctx.scene.enter('COURSE_SCENE'));
 scene.command('start', ctx => ctx.scene.enter('START_SCENE'));
+
+scene.enter(ctx => {
+    ctx.reply('Welcome', Markup.keyboard([
+        ['Faq']
+    ]).extra());
+});
+
+scene.hears(('Faq'), ctx => ctx.scene.enter('FAQ_SCENE'));
 module.exports = scene;
